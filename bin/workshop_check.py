@@ -127,7 +127,7 @@ def check_humandate(date):
 
     # The first three characters of month_dates are not empty
     month = month_dates[:3]
-    if any(char == ' ' for char in month):
+    if ' ' in month:
         return False
 
     # But the fourth character is empty ("February" is illegal)

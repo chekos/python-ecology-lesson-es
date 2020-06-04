@@ -385,9 +385,9 @@ class CheckBase:
         result = set()
         for node in self.find_all(self.doc, {'type': 'text'}):
             for match in P_INTERNAL_LINK_REF.findall(node['value']):
-                text = match[0]
                 link = match[1]
                 if link not in self.args.references:
+                    text = match[0]
                     result.add('"{0}"=>"{1}"'.format(text, link))
         self.reporter.check(not result,
                             self.filename,

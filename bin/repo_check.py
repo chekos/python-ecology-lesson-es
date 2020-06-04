@@ -120,8 +120,7 @@ def get_repo_url(repo_url):
     require(
         username, 'empty project name in git remote output {0}'.format(matches[0]))
 
-    url = F_REPO_URL.format(username, project_name)
-    return url
+    return F_REPO_URL.format(username, project_name)
 
 
 def check_labels(reporter, repo_url):
