@@ -7,10 +7,7 @@ from pkgutil import iter_modules
 # Thanks @ericmjl for function below.
 def check_import(packagename):
     """Checks whether a package is installed"""
-    if packagename in (name for _, name, _ in iter_modules()):
-        return True
-    else:
-        return False
+    return packagename in (name for _, name, _ in iter_modules())
 
 all_checks_passed = True
 
